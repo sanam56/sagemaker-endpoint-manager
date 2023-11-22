@@ -353,6 +353,7 @@ class FoundationModelStack(NestedStack):
                 endpoint.node.add_dependency(logs_policy)
                 endpoint.node.add_dependency(ecr_policy)
                                                                              
+    if len(step_function_enabled_endpoints) > 0:
         stepfunction_stack = StepFunctionStack(self, "StepFunctionStack",
                                        api_stack = api_stack,
                                        step_function_enabled_endpoints=step_function_enabled_endpoints)
