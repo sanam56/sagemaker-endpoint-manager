@@ -64,14 +64,14 @@ This solution was designed to solve a recurring problem with users leaving their
 1. Create a python virtualenv
 
     ```
-    $ python3 -m venv .venv
+    python3 -m venv .venv
     ```
 
 2. Activate your virtual environment
 
     For Mac/Linux platform:
     ```
-    $ source .venv/bin/activate
+    source .venv/bin/activate
     ```
 
     If you are a Windows platform, you would activate the virtualenv like this:
@@ -82,7 +82,7 @@ This solution was designed to solve a recurring problem with users leaving their
 3. Install required dependencies
 
     ```
-    $ pip install -r requirements.txt
+    pip install -r requirements.txt
     ```
 
 4. Bootstrap your environment (if required)
@@ -90,7 +90,7 @@ This solution was designed to solve a recurring problem with users leaving their
     If you have not previously used CDK, bootstrap your environment
 
     ```
-    $ cdk bootstrap
+    cdk bootstrap
     ```
 
 5. Define your configuration
