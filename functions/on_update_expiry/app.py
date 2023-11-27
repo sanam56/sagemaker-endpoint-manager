@@ -42,9 +42,14 @@ def attempt_create_endpoint(endpoint_name, endpoint_config_name, expiry):
         # Endpoint does not exist, create endpoint
         if error.response['Error']['Code'] == 'ValidationException':
             create_endpoint(endpoint_name, endpoint_config_name)
+        if error.response['Error']['Code'] == 'LimitExceededException':
+            print("Verify the ML instance types")
+            print(error)
+            return
         else:
             print("Error describing endpoint")
             print(error)
+            return
 
 def create_endpoint(endpoint_name, endpoint_config_name):
     print("Creating endpoint")
